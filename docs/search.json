@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "content.html",
+    "href": "content.html",
+    "title": "Content 1",
+    "section": "",
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+  },
+  {
+    "objectID": "index.html#programs-to-install",
+    "href": "index.html#programs-to-install",
+    "title": "Overview",
+    "section": "Programs to Install",
+    "text": "Programs to Install\n\nSubheading\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+  },
+  {
+    "objectID": "index.html#websites-to-visit",
+    "href": "index.html#websites-to-visit",
+    "title": "Overview",
+    "section": "Websites to Visit",
+    "text": "Websites to Visit\n\nSubheading 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Content Creators",
+    "section": "",
+    "text": "This workshop was created and facilitated by a dynamic team that is here to assist you before, during, and after your attendance at the workshop! To learn a bit more about us, see our bios and relevant links below."
+  },
+  {
+    "objectID": "about.html#person-name",
+    "href": "about.html#person-name",
+    "title": "Content Creators",
+    "section": "Person Name",
+    "text": "Person Name\npersonal website link –  GitHub profile –  @Twitter handle – contact email\nRemove any sections of the above bar of contact info / links that a given workshop instructor doesn’t want to include. There should be a short (2-4 sentence) blurb that lets workshop attendees get a sense for who you are and tells them how to get in contact with you. Copy paste this block for each person who created workshop content and/or facilitated the workshop in person or via videoconference."
+  }
+]
