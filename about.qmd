@@ -1,5 +1,12 @@
 ---
-title: "About"
+title: "Content Creators"
 ---
 
-About this site
+This workshop was created and facilitated by a dynamic team that is here to assist you before, during, and after your attendance at the workshop! To learn a bit more about us, see our bios and relevant links below.
+
+## Person Name
+
+[personal website link](https://njlyon0.github.io/) -- <img src="images/github_logo.png" width="2%"/> [GitHub profile](https://github.com/njlyon0) -- <img src="images/twitter_logo.png" width="2%"/> [\@Twitter handle](https://twitter.com/scilyon) -- **contact email**
+
+Remove any sections of the above bar of contact info / links that a given workshop instructor doesn't want to include. There should be a short (2-4 sentence) blurb that lets workshop attendees get a sense for who you are and tells them how to get in contact with you. Copy paste this block for each person who created workshop content and/or facilitated the workshop in person or via videoconference.
+
