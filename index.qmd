@@ -1,7 +1,23 @@
 ---
-title: "scicomp-workshop-template"
+title: "Overview"
 ---
 
-This is a Quarto website.
+<img src = "images/nceas_logo_wide.png" align = "right" width = "50%" />
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### Welcome!
+
+This should include a (brief) overview of the workshop content to be covered. Strive to create a welcoming and non-threatening first impression with this page.
+
+To maximize the value of this workshop to you, we recommend you take the following steps before the day of the workshop. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
+
+## Programs to Install
+
+### Subheading
+
+It is worthwhile to use two "#" for headings and three "#" for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections.
+
+## Websites to Visit
+
+### Subheading 2
+
+
