@@ -4,19 +4,30 @@ project:
   output-dir: docs
 
 website:
-  title: "scicomp-workshop-template"
+  title: "NCEAS Sci Comp Workshop Template"
+  repo-url: https://github.com/njlyon0/scicomp-workshop-template
+  repo-actions: [issue]
+  twitter-card: true
   navbar:
     background: primary
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+    right:
+      - icon: github
+        href: https://github.com/njlyon0/scicomp-workshop-template
+  page-footer:
+    center: "Copyright 2022, NCEAS"
+    background: secondary
 
 format:
   html:
-    theme: cosmo
+    theme:
+       light: yeti
+       dark: cyborg
     css: styles.css
     toc: true
-
-
-
+    link-external-newwindow: true
+    link-external-icon: false
+    
