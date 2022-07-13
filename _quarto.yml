@@ -4,7 +4,7 @@ project:
   output-dir: docs
 
 website:
-  title: "NCEAS Sci Comp Workshop Template"
+  title: "NCEAS Sci Comp Workshop - Template"
   repo-url: https://github.com/njlyon0/scicomp-workshop-template
   repo-actions: [issue]
   twitter-card: true
@@ -13,6 +13,7 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - content.qmd
       - about.qmd
     right:
       - icon: github
