@@ -34,7 +34,8 @@ There are several paths to [creating a website with Quarto](https://quarto.org/d
 
 1. Create a GitHub repository with a README and .gitignore
 
-2. Run `quarto create-project \<project name\> --type website` in the *Terminal*
+2. Run `quarto create-project myproject --type website` in the *Terminal*
+    - Note that "myproject" should be the same as your repo name or you'll need to drag some files around
 
 3. Create a file called ".nojekyll" by running `touch .nojekyll` in the *Terminal*
 
