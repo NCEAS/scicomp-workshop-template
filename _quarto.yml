@@ -5,7 +5,7 @@ project:
 
 website:
   title: "NCEAS Sci Comp Workshop - Template"
-  repo-url: https://github.com/njlyon0/scicomp-workshop-template
+  repo-url: https://github.com/NCEAS/scicomp-workshop-template
   repo-actions: [issue]
   twitter-card: true
   navbar:
@@ -17,7 +17,7 @@ website:
       - about.qmd
     right:
       - icon: github
-        href: https://github.com/njlyon0/scicomp-workshop-template
+        href: https://github.com/NCEAS/scicomp-workshop-template
   page-footer:
     center: "Copyright 2022, NCEAS"
     background: secondary
