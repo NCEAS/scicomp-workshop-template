@@ -11,7 +11,8 @@ This repository is the template for workshops offered by NCEAS Scientific Comput
 2. **Rename** the repository by replacing "template" with 1-2 words about the workshop content
     - E.g., "scicomp-workshop-github", "scicomp-workshop-tidyverse", etc.
 
-3. **Transfer ownership** of the repository to the [NCEAS GitHub Organization](https://github.com/NCEAS)
+3. **Transfer ownership** of the repository to **someone who can make public repositories** on the [NCEAS GitHub Organization](https://github.com/NCEAS)
+    - Likely Julien Brun [brunj7](https://github.com/brunj7)
 
 4. **Create content** for the workshop in separate .qmd files
     - Note that you'll need to add the names of each file to the "_quarto.yml" file for the pages to be included in the Quarto website
