@@ -2,7 +2,7 @@
 
 ## Repository Explanation
 
-This repository is the template for workshops offered by NCEAS Scientific Computing Support Team (SciComp). This repository (and by extension, future workshops' repositories) creates a website with [Quarto](https://quarto.org/) meaning that web pages can be written with Markdown syntax. Following the steps below when creating a new workshop repository guarantees a consistent structure and aesthetic across all workshops (i.e., a consistent "brand").
+This repository is the template for workshops offered by NCEAS Scientific Computing Support (SciComp) Team. This repository (and by extension, future workshops' repositories) creates a website with [Quarto](https://quarto.org/) meaning that web pages can be written with Markdown syntax. Following the steps below when creating a new workshop repository guarantees a consistent structure and aesthetic across all workshops (i.e., a consistent "brand").
 
 ## To Make a New Workshop Repository:
 
