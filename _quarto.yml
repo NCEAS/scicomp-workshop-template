@@ -3,6 +3,9 @@ project:
   execute-dir: project
   output-dir: docs
 
+execute:
+  freeze: true
+
 website:
   title: "NCEAS Sci Comp Workshop - Template"
   repo-url: https://github.com/NCEAS/scicomp-workshop-template
