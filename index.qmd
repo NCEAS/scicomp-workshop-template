@@ -20,4 +20,4 @@ It is worthwhile to use two "#" for headings and three "#" for subheadings to th
 
 ### Subheading 2
 
-
+E.g., [GitHub](https://github.com/) or [RStudio](https://www.rstudio.com/products/rstudio/download/)
