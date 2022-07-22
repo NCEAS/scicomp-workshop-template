@@ -9,7 +9,7 @@ author: 'Carlos Scheidegger'
 description: 'This action will render an existing quarto project'
 
 inputs:
-  to:
+  to: "html"
     description: 'Format to render output. Use "all" to generate all outputs, when eg rendering a book in HTML and PDF'
     required: false
   path:
