@@ -8,6 +8,12 @@ title: "Summarize"
 
 Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the "_quarto.yml" and run `quarto render` in the Terminal to add the page to the deployed website!**
 
+
+magrittr:: %>%
+dplyr::group_by()
+dplyr::summarize()
+dplyr::n()
+
 ### Workshop Subheading
 
 It is worthwhile to use two "#" for headings and three "#" for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections.
