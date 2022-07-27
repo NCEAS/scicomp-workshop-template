@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "join.html",
-    "href": "join.html",
+    "objectID": "join.html#workshop-topic-heading",
+    "href": "join.html#workshop-topic-heading",
     "title": "Join",
-    "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ndplyr::…_join() functions\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "section": "Workshop Topic Heading",
+    "text": "Workshop Topic Heading\n\nDuplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ndplyr::…_join() functions\n\nWorkshop Subheading\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   },
   {
     "objectID": "index.html#programs-to-install",
@@ -21,11 +21,11 @@
     "text": "Websites to Visit\n\nSupplemental Material\nWhile not technically necessary to attend the workshop, if you’d like you can see the content that created the workshop website you are viewing by visiting our GitHub repository here."
   },
   {
-    "objectID": "wrangle.html",
-    "href": "wrangle.html",
+    "objectID": "wrangle.html#workshop-topic-heading",
+    "href": "wrangle.html#workshop-topic-heading",
     "title": "Wrangle",
-    "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ndplyr::select with dplyr::contains() dplyr::filter() with logical and boolean operators tidyr::separate() dplyr::mutate() dplyr::case_when()\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "section": "Workshop Topic Heading",
+    "text": "Workshop Topic Heading\n\nDuplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ndplyr::select with dplyr::contains() dplyr::filter() with logical and boolean operators tidyr::separate() dplyr::mutate() dplyr::case_when()\n\nWorkshop Subheading\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   },
   {
     "objectID": "about.html",
@@ -63,10 +63,10 @@
     "text": "Pipe Operator (%>%)\n\nBefore diving into the tidyverse functions that allow for summarization and group-wise operations, let’s talk about the pipe operator (%>%). The pipe is from the magrittr package and allows chaining together multiple functions without needing to create separate objects at each step as you would have to without the pipe.\n\nPipe Example\nAs in the other chapters, let’s use the “penguins” data object found in the palmerpenguins package. Let’s say we want to keep only specimens that have a measurement for both bill length and bill depth and then remove the flipper and body mass columns.\nWithout the pipe–but still using other tidyverse functions–we could go about this like this: ::: {.cell}\n# Filter out the NAs\npenguins_v2 <- dplyr::filter(.data = penguins,\n                              !is.na(bill_length_mm) & !is.na(bill_depth_mm))\n\n# Now strip away the columns we don't want\npenguins_v3 <- dplyr::select(.data = penguins_v2, \n                             -flipper_length_mm, -body_mass_g)\n\n# And we can look at our final product with `base::head`\nhead(penguins_v3)\n\n# A tibble: 6 × 6\n  species island    bill_length_mm bill_depth_mm sex     year\n  <fct>   <fct>              <dbl>         <dbl> <fct>  <int>\n1 Adelie  Torgersen           39.1          18.7 male    2007\n2 Adelie  Torgersen           39.5          17.4 female  2007\n3 Adelie  Torgersen           40.3          18   female  2007\n4 Adelie  Torgersen           36.7          19.3 female  2007\n5 Adelie  Torgersen           39.3          20.6 male    2007\n6 Adelie  Torgersen           38.9          17.8 female  2007\n\n:::\nUsing the pipe though we can simplify this code dramatically! Note that each of the following lines must end with the %>% so that R knows there are more lines to consider. ::: {.cell}\n# We begin with the name of the data object\npenguins %>%\n  # Then we can filter the data\n  dplyr::filter(!is.na(bill_length_mm) & !is.na(bill_depth_mm)) %>%\n  # And strip away the columns we don't want\n  dplyr::select(-flipper_length_mm, -body_mass_g) %>%\n  # And we can even include the `head` argument to see our progress\n  head()\n\n# A tibble: 6 × 6\n  species island    bill_length_mm bill_depth_mm sex     year\n  <fct>   <fct>              <dbl>         <dbl> <fct>  <int>\n1 Adelie  Torgersen           39.1          18.7 male    2007\n2 Adelie  Torgersen           39.5          17.4 female  2007\n3 Adelie  Torgersen           40.3          18   female  2007\n4 Adelie  Torgersen           36.7          19.3 female  2007\n5 Adelie  Torgersen           39.3          20.6 male    2007\n6 Adelie  Torgersen           38.9          17.8 female  2007\n\n:::\nNote that using the pipe allows each line to inherit the data provided by the previous line.\n\n\nChallenge: Pipe\nUsing pipes, filter the data to only include male penguins, keep only the columns for species, island, and body mass, and drop any rows with NA for body mass.\n\n\nAside: Fun History of Why %>% is a “Pipe”\nThe Belgian painter René Magritte famously created a painting titled “The Treachery of Images” featuring a depiction of a smoking pipe above the words “Cest ci n’est pas une pipe” (French for “This is not a pipe”). Magritte’s point was about how the depiction of a thing is not equal to thing itself. The magrittr package takes its name from the painter because it also includes a pipe that functions slightly differently from a command line pipe and uses different characters. Just like Magritte’s pipe, %>% both is and isn’t a pipe!\nDuplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\nmagrittr:: %>% dplyr::group_by() dplyr::summarize() dplyr::n()\n\n\nWorkshop Subheading\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   },
   {
-    "objectID": "reshape.html",
-    "href": "reshape.html",
+    "objectID": "reshape.html#workshop-topic-heading",
+    "href": "reshape.html#workshop-topic-heading",
     "title": "Reshape",
-    "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ntidyr::pivot_wider() tidyr::pivot_longer()\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "section": "Workshop Topic Heading",
+    "text": "Workshop Topic Heading\n\nDuplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ntidyr::pivot_wider() tidyr::pivot_longer()\n\nWorkshop Subheading\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   }
 ]

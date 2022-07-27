@@ -2,6 +2,10 @@
 title: "Reshape"
 ---
 
+```{r, echo = F, message = F}
+library(tidyverse); library(palmerpenguins)
+```
+
 ## Workshop Topic Heading
 
 <img src = "images/nceas_logo_square.png" align = "right" width = "15%" />
