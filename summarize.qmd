@@ -2,9 +2,56 @@
 title: "Summarize"
 ---
 
-## Workshop Topic Heading
+```{r, echo = F, message = F}
+library(tidyverse); library(palmerpenguins)
+```
+
+## Pipe Operator (`%>%`)
 
 <img src = "images/nceas_logo_square.png" align = "right" width = "15%" />
+
+Before diving into the `tidyverse` functions that allow for summarization and group-wise operations, let's talk about the pipe operator (`%>%`). The pipe is from the `magrittr` package and allows chaining together multiple functions without needing to create separate objects at each step as you would have to without the pipe.
+
+### Pipe Example
+
+As in the other chapters, let's use the "penguins" data object found in the `palmerpenguins` package. Let's say we want to keep only specimens that have a measurement for both bill length and bill depth and then remove the flipper and body mass columns.
+
+Without the pipe--but still using other `tidyverse` functions--we could go about this like this:
+```{r}
+# Filter out the NAs
+penguins_v2 <- dplyr::filter(.data = penguins,
+                              !is.na(bill_length_mm) & !is.na(bill_depth_mm))
+
+# Now strip away the columns we don't want
+penguins_v3 <- dplyr::select(.data = penguins_v2, 
+                             -flipper_length_mm, -body_mass_g)
+
+# And we can look at our final product with `base::head`
+head(penguins_v3)
+```
+
+Using the pipe though we can simplify this code dramatically! Note that each of the following lines must end with the `%>%` so that R knows there are more lines to consider.
+```{r}
+# We begin with the name of the data object
+penguins %>%
+  # Then we can filter the data
+  dplyr::filter(!is.na(bill_length_mm) & !is.na(bill_depth_mm)) %>%
+  # And strip away the columns we don't want
+  dplyr::select(-flipper_length_mm, -body_mass_g) %>%
+  # And we can even include the `head` argument to see our progress
+  head()
+```
+
+Note that using the pipe allows each line to inherit the data provided by the previous line.
+
+### Challenge: Pipe
+
+Using pipes, filter the data to only include male penguins, keep only the columns for species, island, and body mass, and drop any rows with NA for body mass.
+
+### Aside: Fun History of Why `%>%` is a "Pipe"
+
+The Belgian painter René Magritte famously created a painting titled "[The Treachery of Images](https://collections.lacma.org/node/239578)" featuring a depiction of a smoking pipe above the words "*Cest ci n'est pas une pipe*" (French for "This is not a pipe"). Magritte's point was about how the depiction of a thing is not equal to thing itself. The `magrittr` package takes its name from the painter because it also includes a pipe that functions slightly differently from a command line pipe and uses different characters. Just like Magritte's pipe, `%>%` both is and isn't a pipe!
+
 
 Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the "_quarto.yml" and run `quarto render` in the Terminal to add the page to the deployed website!**
 
