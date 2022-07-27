@@ -175,10 +175,11 @@
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">On this page</h2>
 <ul>
-<li><a href="#wide-versus-long-format" id="toc-wide-versus-long-format" class="nav-link active" data-scroll-target="#wide-versus-long-format">Wide Versus Long Format</a></li>
-<li><a href="#example-reshaping-wider" id="toc-example-reshaping-wider" class="nav-link" data-scroll-target="#example-reshaping-wider">Example: Reshaping Wider</a></li>
-<li><a href="#example-reshaping-longer" id="toc-example-reshaping-longer" class="nav-link" data-scroll-target="#example-reshaping-longer">Example: Reshaping Longer</a>
+<li><a href="#defining-shape" id="toc-defining-shape" class="nav-link active" data-scroll-target="#defining-shape">Defining Shape</a></li>
+<li><a href="#reshaping-data" id="toc-reshaping-data" class="nav-link" data-scroll-target="#reshaping-data">Reshaping Data</a>
 <ul class="collapse">
+<li><a href="#example-reshaping-wider" id="toc-example-reshaping-wider" class="nav-link" data-scroll-target="#example-reshaping-wider">Example: Reshaping Wider</a></li>
+<li><a href="#example-reshaping-longer" id="toc-example-reshaping-longer" class="nav-link" data-scroll-target="#example-reshaping-longer">Example: Reshaping Longer</a></li>
 <li><a href="#challenge-reshaping" id="toc-challenge-reshaping" class="nav-link" data-scroll-target="#challenge-reshaping">Challenge: Reshaping</a></li>
 </ul></li>
 </ul>
@@ -193,8 +194,8 @@
 <div class="cell">
 
 </div>
-<section id="wide-versus-long-format" class="level2">
-<h2 class="anchored" data-anchor-id="wide-versus-long-format">Wide Versus Long Format</h2>
+<section id="defining-shape" class="level2">
+<h2 class="anchored" data-anchor-id="defining-shape">Defining Shape</h2>
 <p><img src="images/nceas_logo_square.png" align="right" width="15%"></p>
 <p>Before talking about <em>how</em> to reshape your data between wide and long format, let’s talk about <em>what</em> “shape” means in reference to data. Fundamentally, “long” data are data with more rows than columns while “wide” data tend to have more columns than rows.</p>
 <p>For example, in community ecology a “wide” dataframe could have each row being a site that researchers visited while each column could be a different species where the value in the row is the number of individuals of that species at that site. On the other hand, the <code>penguins</code> dataframe we’ve been working with so far is in “long” format because it has one row per penguin and multiple penguins are stacked up.</p>
@@ -226,8 +227,10 @@
 </div>
 <p>Great! We can use this smaller data object to demonstrate reshaping more clearly.</p>
 </section>
-<section id="example-reshaping-wider" class="level2">
-<h2 class="anchored" data-anchor-id="example-reshaping-wider">Example: Reshaping Wider</h2>
+<section id="reshaping-data" class="level2">
+<h2 class="anchored" data-anchor-id="reshaping-data">Reshaping Data</h2>
+<section id="example-reshaping-wider" class="level3">
+<h3 class="anchored" data-anchor-id="example-reshaping-wider">Example: Reshaping Wider</h3>
 <p>Let’s begin with <code>pivot_wider</code>. Let’s say that we want to take that data object and reshape it into wide format so that each island is a column and each species of penguin is a row. The contents of each cell then are going to be the average bill length values that we just calculated.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Begin by naming the objects</span></span>
@@ -250,8 +253,8 @@
 </div>
 <p>Great! We now have each island as a column, each row is a penguin species, and the bill length measurement we took is included in each cell. Note that in this specific case this makes the number somewhat ambiguous so we might want to use <code>dplyr</code>’s <code>select</code> or the more specific <code>rename</code> to change the island names to be clearer that those values are bill lengths in milimeters.</p>
 </section>
-<section id="example-reshaping-longer" class="level2">
-<h2 class="anchored" data-anchor-id="example-reshaping-longer">Example: Reshaping Longer</h2>
+<section id="example-reshaping-longer" class="level3">
+<h3 class="anchored" data-anchor-id="example-reshaping-longer">Example: Reshaping Longer</h3>
 <p>Now that we have a small wide format data object, we can feed it to <code>pivot_longer</code> and reshape our data into long format! <code>pivot_longer</code> has very similar syntax except that with <code>pivot_longer</code> you need to tell the function which columns should be reshaped.</p>
 <p><code>pivot_wider</code> on the other hand knows which columns to move around because you manually specify them in the “names_from” and “values_from” arguments.</p>
 <div class="cell">
@@ -289,6 +292,7 @@
 <li>Note that we could have also said <code>cols = Biscoe, Dream, Torgersen</code> and achieved the same reshaping of the data.</li>
 </ul></li>
 </ul>
+</section>
 <section id="challenge-reshaping" class="level3">
 <h3 class="anchored" data-anchor-id="challenge-reshaping">Challenge: Reshaping</h3>
 <p>The code below creates a data object that includes the flipper length of all Adelie penguins; what code would you add to reshape the data so that each sex is a column with flipper lengths in the cells?</p>

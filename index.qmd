@@ -16,7 +16,7 @@ To maximize the value of this workshop to you, **we recommend you take the follo
 
 ### R & RStudio
 
-Install [R](https://www.r-project.org/) and its more convenient (in our opinion) user-interface [RStudio](https://www.rstudio.com/products/rstudio/download/).
+**Install [R](https://www.r-project.org/) and its more convenient (in our opinion) user-interface: [RStudio](https://www.rstudio.com/products/rstudio/download/)**.
 
 If you already have R, check that you have at least version 4.0.0 by running the following code:
 
@@ -28,7 +28,7 @@ If your version starts with a 3 (e.g., the above code returns "R version 3..."),
 
 ### R Packages
 
-Install the `tidyverse` and `palmerpenguins` R packages using the following code:
+**Install the `tidyverse` and `palmerpenguins` R packages** using the following code:
 
 ```{r, eval = F}
 install.packages("tidyverse", "palmerpenguins")
