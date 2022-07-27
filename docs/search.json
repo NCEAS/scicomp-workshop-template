@@ -11,14 +11,14 @@
     "href": "index.html#programs-to-install",
     "title": "Overview",
     "section": "Programs to Install",
-    "text": "Programs to Install\n\nSubheading\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "text": "Programs to Install\n\nR & RStudio\nInstall R and its more convenient (in our opinion) user-interface RStudio.\nIf you already have R, check that you have at least version 4.0.0 by running the following code:\n\nversion$version.string\n\nIf your version starts with a 3 (e.g., the above code returns “R version 3…”), please update R to make sure all packages behave as expected.\n\n\nR Packages\nInstall the tidyverse and palmerpenguins R packages using the following code:\n\ninstall.packages(\"tidyverse\", \"palmerpenguins\")\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nPlease run the above code even if you already have these packages to update these packages and ensure that your code aligns with the examples and challenges introduced during the workshop."
   },
   {
     "objectID": "index.html#websites-to-visit",
     "href": "index.html#websites-to-visit",
     "title": "Overview",
     "section": "Websites to Visit",
-    "text": "Websites to Visit\n\nSubheading 2\nE.g., GitHub or RStudio"
+    "text": "Websites to Visit\n\nSupplemental Material\nWhile not technically necessary to attend the workshop, if you’d like you can see the content that created the workshop website you are viewing by visiting our GitHub repository here."
   },
   {
     "objectID": "wrangle.html",

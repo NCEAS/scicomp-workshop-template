@@ -6,18 +6,40 @@ title: "Overview"
 
 ### Welcome!
 
-This should include a (brief) overview of the workshop content to be covered. Strive to create a welcoming and non-threatening first impression with this page.
+This workshop provides an overview of many of the packages included in the `tidyverse` suite of packages for the R programming language. The `tidyverse` is a veritable universe of tools though that no single workshop could hope to cover so **we are focusing here on an introductory approach that focuses primarily on some fundamentals to tidying data in R**. We are always happy to improve workshop content so please don't hesitate to [post an Issue](https://github.com/NCEAS/scicomp-workshop-tidyverse/issues) on our GitHub repository if you see clear areas for improvement!
 
-To maximize the value of this workshop to you, we recommend you take the following steps before the day of the workshop. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
+<img src = "images/hex_tidyverse.png" align = "right" width = "17%" />
+
+To maximize the value of this workshop to you, **we recommend you take the following steps before the day of the workshop**. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
 
 ## Programs to Install
 
-### Subheading
+### R & RStudio
 
-It is worthwhile to use two "#" for headings and three "#" for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections.
+Install [R](https://www.r-project.org/) and its more convenient (in our opinion) user-interface [RStudio](https://www.rstudio.com/products/rstudio/download/).
+
+If you already have R, check that you have at least version 4.0.0 by running the following code:
+
+```{r, eval = F}
+version$version.string
+```
+
+If your version starts with a 3 (e.g., the above code returns "R version 3..."), please update R to make sure all packages behave as expected.
+
+### R Packages
+
+Install the `tidyverse` and `palmerpenguins` R packages using the following code:
+
+```{r, eval = F}
+install.packages("tidyverse", "palmerpenguins")
+library(tidyverse)
+library(palmerpenguins)
+```
+
+**Please run the above code even if you already have these packages** to update these packages and ensure that your code aligns with the examples and challenges introduced during the workshop.
 
 ## Websites to Visit
 
-### Subheading 2
+### Supplemental Material
 
-E.g., [GitHub](https://github.com/) or [RStudio](https://www.rstudio.com/products/rstudio/download/)
+While not technically necessary to attend the workshop, if you'd like you can see the content that created the workshop website you are viewing by visiting our [GitHub repository here](https://github.com/NCEAS/scicomp-workshop-tidyverse).
