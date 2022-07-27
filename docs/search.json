@@ -4,7 +4,7 @@
     "href": "join.html",
     "title": "Join",
     "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ndplyr::…_join() functions\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   },
   {
     "objectID": "index.html#programs-to-install",
@@ -25,7 +25,7 @@
     "href": "wrangle.html",
     "title": "Wrangle",
     "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ndplyr::select with dplyr::contains() dplyr::filter() with logical and boolean operators tidyr::separate() dplyr::mutate() dplyr::case_when()\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   },
   {
     "objectID": "about.html",
@@ -35,24 +35,38 @@
     "text": "This workshop was created and facilitated by a dynamic team that is here to assist you before, during, and after your attendance at the workshop! To learn a bit more about us, see our bios and relevant links below."
   },
   {
-    "objectID": "about.html#person-name",
-    "href": "about.html#person-name",
+    "objectID": "about.html#julien-brun",
+    "href": "about.html#julien-brun",
     "title": "Content Creators",
-    "section": "Person Name",
-    "text": "Person Name\npersonal website link –  GitHub profile –  @Twitter handle – contact email\nRemove any sections of the above bar of contact info / links that a given workshop instructor doesn’t want to include. There should be a short (2-4 sentence) blurb that lets workshop attendees get a sense for who you are and tells them how to get in contact with you. Copy paste this block for each person who created workshop content and/or facilitated the workshop in person or via videoconference."
+    "section": "Julien Brun",
+    "text": "Julien Brun\nbrunj7.github.io –  brunj7 –  @brunj7 – brun@nceas.ucsb.edu\n\nAs a senior data scientist, the core of Julien’s work is to understand the data and computing challenges researchers are facing and help them to translate these challenges into solvable tasks. Julien advises and mentors on how to clean, structure, combine, and analyze their heterogeneous data sets, as well as scaling up their analysis while promoting open and reproducible data science principles.\nJulien is also a Lecturer in the Master in Environmental Data Science program at Bren School of Environmental Science and Management at UC Santa Barbara, where he teaches “good enough” practices in reproducible and collaborative data science."
+  },
+  {
+    "objectID": "about.html#angel-chen",
+    "href": "about.html#angel-chen",
+    "title": "Content Creators",
+    "section": "Angel Chen",
+    "text": "Angel Chen\n angelchen7 – anchen@nceas.ucsb.edu\n\nAngel supports LTER synthesis working groups by developing data pipelines and reproducible analytical workflows to integrate various sources of data. Angel previously worked as a data curator for the Arctic Data Center, helping researchers archive and store their data. Angel recently completed a B.S. in statistics & data science at the University of California, Santa Barbara."
+  },
+  {
+    "objectID": "about.html#nick-lyon",
+    "href": "about.html#nick-lyon",
+    "title": "Content Creators",
+    "section": "Nick Lyon",
+    "text": "Nick Lyon\nnjlyon0.github.io –  njlyon0 –  @scilyon – lyon@nceas.ucsb.edu\n\nAs a trained community ecologist, Nick is no stranger to the realities of “messy” environmental data and has learned the tidyverse as part of an effort to reproducibly manage those data for analysis and visualization. His zeal for the tidyverse is born out of the number of times these tools have allowed him to untangle a rat’s nest of idiodsyncratic data and he hopes this workshop will be valuable to all participants.Nick completed his MS in Ecology and Evolutionary Biology at Iowa State University"
   },
   {
     "objectID": "summarize.html",
     "href": "summarize.html",
     "title": "Summarize",
     "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\nmagrittr:: %>% dplyr::group_by() dplyr::summarize() dplyr::n()\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   },
   {
     "objectID": "reshape.html",
     "href": "reshape.html",
     "title": "Reshape",
     "section": "",
-    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\ntidyr::pivot_wider() tidyr::pivot_longer()\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   }
 ]
