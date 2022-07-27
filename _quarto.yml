@@ -8,7 +8,7 @@ execute:
 
 website:
   title: "NCEAS Sci Comp Workshop - Template"
-  repo-url: https://github.com/NCEAS/scicomp-workshop-template
+  repo-url: https://github.com/NCEAS/scicomp-workshop-tidyverse
   repo-actions: [issue]
   twitter-card: true
   navbar:
@@ -16,11 +16,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - content.qmd
+      - wrangle.qmd
+      - summarize.qmd
+      - reshape.qmd
+      - join.qmd
       - about.qmd
     right:
       - icon: github
-        href: https://github.com/NCEAS/scicomp-workshop-template
+        href: https://github.com/NCEAS/scicomp-workshop-tidyverse
   page-footer:
     center: "Copyright 2022, NCEAS"
     background: secondary

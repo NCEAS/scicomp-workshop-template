@@ -1,7 +1,7 @@
 [
   {
-    "objectID": "content.html",
-    "href": "content.html",
+    "objectID": "join.html",
+    "href": "join.html",
     "title": "Content 1",
     "section": "",
     "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
@@ -21,6 +21,13 @@
     "text": "Websites to Visit\n\nSubheading 2\nE.g., GitHub or RStudio"
   },
   {
+    "objectID": "wrangle.html",
+    "href": "wrangle.html",
+    "title": "Content 1",
+    "section": "",
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Content Creators",
@@ -33,5 +40,19 @@
     "title": "Content Creators",
     "section": "Person Name",
     "text": "Person Name\npersonal website link –  GitHub profile –  @Twitter handle – contact email\nRemove any sections of the above bar of contact info / links that a given workshop instructor doesn’t want to include. There should be a short (2-4 sentence) blurb that lets workshop attendees get a sense for who you are and tells them how to get in contact with you. Copy paste this block for each person who created workshop content and/or facilitated the workshop in person or via videoconference."
+  },
+  {
+    "objectID": "summarize.html",
+    "href": "summarize.html",
+    "title": "Content 1",
+    "section": "",
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
+  },
+  {
+    "objectID": "reshape.html",
+    "href": "reshape.html",
+    "title": "Content 1",
+    "section": "",
+    "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   }
 ]
