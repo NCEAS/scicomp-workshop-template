@@ -16,10 +16,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - wrangle.qmd
-      - summarize.qmd
-      - reshape.qmd
-      - join.qmd
+      - content.qmd
       - about.qmd
     right:
       - icon: github
