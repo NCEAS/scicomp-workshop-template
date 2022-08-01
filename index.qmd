@@ -6,9 +6,10 @@ title: "Overview"
 
 ### Welcome!
 
-This workshop provides an overview of many of the packages included in the `tidyverse` suite of packages for the R programming language. The `tidyverse` is a veritable universe of tools though that no single workshop could hope to cover so **we are focusing here on an introductory approach that focuses primarily on some fundamentals to tidying data in R**. We are always happy to improve workshop content so please don't hesitate to [post an Issue](https://github.com/NCEAS/scicomp-workshop-tidyverse/issues) on our GitHub repository if you see clear areas for improvement!
+A short blurb on the topic of the workshop should be covered here. Strive to be welcoming and nonthreatening as this page includes our 'before you arrive' instructions and thus precedes workshop participants actually meeting us in person (or via Zoom).
 
-<img src = "images/hex_tidyverse.png" align = "right" width = "17%" />
+
+We are always happy to improve workshop content so please don't hesitate to [post an Issue](https://github.com/NCEAS/scicomp-workshop-template/issues) on our GitHub repository if you see clear areas for improvement!
 
 To maximize the value of this workshop to you, **we recommend you take the following steps before the day of the workshop**. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
 
@@ -28,7 +29,7 @@ If your version starts with a 3 (e.g., the above code returns "R version 3..."),
 
 ### R Packages
 
-**Install the `tidyverse` and `palmerpenguins` R packages** using the following code:
+**Install the `package A` and `package B` R packages** using the following code:
 
 ```{r, eval = F}
 install.packages("tidyverse", "palmerpenguins")
@@ -42,4 +43,4 @@ library(palmerpenguins)
 
 ### Supplemental Material
 
-While not technically necessary to attend the workshop, if you'd like you can see the content that created the workshop website you are viewing by visiting our [GitHub repository here](https://github.com/NCEAS/scicomp-workshop-tidyverse).
+While not technically necessary to attend the workshop, if you'd like you can see the content that created the workshop website you are viewing by visiting our [GitHub repository here](https://github.com/NCEAS/scicomp-workshop-template).
