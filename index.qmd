@@ -6,9 +6,9 @@ title: "Overview"
 
 ### Welcome!
 
-This workshop provides an overview of many of the packages included in the `tidyverse` suite of packages for the R programming language. The `tidyverse` is a veritable universe of tools though that no single workshop could hope to cover so **we are focusing here on an introductory approach that focuses primarily on some fundamentals to tidying data in R**. We are always happy to improve workshop content so please don't hesitate to [post an Issue](https://nceas.github.io/scicomp-workshop-collaborative-coding/issues) on our GitHub repository if you see clear areas for improvement!
+This workshop provides an overview of what "version control" systems are and how they fit into collaborative coding within your team. Specifically, **we are focusing here on an introductory approach to version control that focuses on using `git` via RStudio and GitHub**. We are always happy to improve workshop content so please don't hesitate to [post an Issue](https://nceas.github.io/scicomp-workshop-collaborative-coding/issues) on our GitHub repository if you see clear areas for improvement!
 
-<img src = "images/hex_tidyverse.png" align = "right" width = "17%" />
+<img src = "images/github_logo.png" align = "right" width = "17%" />
 
 To maximize the value of this workshop to you, **we recommend you take the following steps before the day of the workshop**. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
 
