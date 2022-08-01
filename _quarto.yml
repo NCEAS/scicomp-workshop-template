@@ -7,7 +7,8 @@ execute:
   freeze: false
 
 website:
-  title: "NCEAS Sci Comp Workshop - Template"
+  title: "NCEAS Sci Comp Workshop - GitHub"
+  favicon: images/scicomptools_hex.png
   repo-url: https://github.com/NCEAS/scicomp-workshop-tidyverse
   repo-actions: [issue]
   twitter-card: true
