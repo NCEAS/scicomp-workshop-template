@@ -7,7 +7,7 @@ execute:
   freeze: false
 
 website:
-  title: "NCEAS Sci Comp Workshop - GitHub"
+  title: "Sci Comp Workshop - GitHub"
   favicon: images/scicomptools_hex.png
   repo-url: https://nceas.github.io/scicomp-workshop-collaborative-coding/
   repo-actions: [issue]
@@ -17,7 +17,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - content.qmd
+      - motivations.qmd
+      - github.qmd
+      - rstudio.qmd
+      - issues.qmd
+      - conflicts.qmd
+      - branches.qmd
+      - forks.qmd
+      - server.qmd
       - about.qmd
     right:
       - icon: github
