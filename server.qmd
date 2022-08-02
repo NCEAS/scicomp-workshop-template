@@ -1,0 +1,80 @@
+---
+title: "Server"
+---
+
+## Overview
+
+<img src="images/nceas_logo_square.png" align="right" width="15%" />
+
+Working on [NCEAS' Server](https://aurora.nceas.ucsb.edu/) is similar to working on an entirely separate computer from the laptop or desktop computer on which you typically work. This means that you need to go through the steps of connecting GitHub to your "RStudio" again for the instance of RStudio accessed through Aurora. GitHub's Personal Access Token is referred to as "token" hereafter for simplicity.
+
+## Server Workflow Instructions
+
+### Step 1: Connect Server RStudio with GitHub
+
+To begin, load the `usethis` package (install if needed).
+```{r load-libraries, eval = F}
+# install.packages("usethis")
+library(usethis)
+```
+
+Next, configure your name and the email address you use for your GitHub account.
+
+```{r config-user-profile, eval = F}
+usethis::use_git_config(user.name = "Jane Doe",
+                        user.email = "jane@example.org")
+```
+
+If you would like to check that this worked, you can go to the "Terminal" tab (next to the "Console" tab) and run `git config --global --list`.
+
+### Step 2: Create GitHub Token
+
+You may use your token that you already generated for your local RStudio if that is easiest, but you can also create a new token specifically for your Server identity.
+
+To create a token, you can again use the `usethis` package to send you to the relevant part of the GitHub website.
+
+```{r create-token, eval = F}
+usethis::create_github_token()
+```
+
+Once you have walked through that process and created a new token **COPY** the long string of letters and numbers. It is often a good move to take a screenshot of the token and store it on your computer for a rainy day.
+
+### Step 3: Store GitHub Token
+
+To store the token in your server identity, run the following line of code:
+
+```{r store-token, eval = F}
+gitcreds::gitcreds_set()
+```
+
+In the "Console" tab you will be prompted to follow a short set of questions (answered via entering numbers in the Console) including the Console requesting your GitHub token.
+
+**PASTE** the long string you copied in the previous step into the supplied field and continue. Note that if you did not copy the token (or copied something else between then and now thus losing the token from your clipboard) you can refer to the screenshot we recommended you take upon first generating the token.
+
+### Step 4: Preserve GitHub Token
+
+You will also need to tell the server to remember your token so that you don't need to re-do the "Store GitHub Token" section every time you start a new R session.
+
+Unfortunately, there are two limitations to this step:
+
+1) Storage can only be done in the "Terminal" pane with the command line (don't worry, it's only one line!)
+
+2) Storage must be for a finite amount of time (though it can be a long time!)
+
+To make the system remember your token, in the "Terminal" pane of RStudio type the following:
+
+`git config --global credential.helper 'cache --timeout=10000000'`
+
+This will cache your "credentials" (i.e., your token) for a long time so that you need not worry about this for the time being.
+
+Not running the above line will make your personal access token expire immediately in the system, even though GitHub considers its expiration date (that you set earlier) separately. 
+
+### Optional Other Steps
+
+You may want to configure additional settings, such as:
+
+- The default branch name (for new repositories)
+
+```{r default-branch-name, eval = F}
+usethis::git_default_branch_configure(name = "main")
+```

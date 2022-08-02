@@ -2,7 +2,8 @@
 title: "Overview"
 ---
 
-<img src = "images/nceas_logo_wide.png" align = "right" width = "50%" />
+<img src="images/nceas_logo_wide.png" align="right" width="50%" />
+<img src="images/LTER-network-horizontal.png" align="right" width="50%" />
 
 ### Welcome!
 
@@ -10,9 +11,11 @@ This workshop provides an overview of what "version control" systems are and how
 
 <img src = "images/github_logo.png" align = "right" width = "17%" />
 
-To maximize the value of this workshop to you, **we recommend you take the following steps before the day of the workshop**. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
+To maximize the value of this workshop to you, **we recommend that you take the following steps before the day of the workshop**. Depending on whether you've used RStudio and/or GitHub before you may have already completed some or all of these steps but please read through the following materials regardless to ensure that all participants arrive with a common foundation of installed programs. If anything is unclear, feel free to reach out to us; our contact information can be found in the "Content Creators" tab.
 
 ## Programs to Install
+
+**Note for those of you with a dedicated IT team that has sole power to install software on your computer:** you will need to contact them before the workshop to install the following programs.
 
 ### R & RStudio
 
@@ -26,20 +29,46 @@ version$version.string
 
 If your version starts with a 3 (e.g., the above code returns "R version 3..."), please update R to make sure all packages behave as expected.
 
-### R Packages
+### `git`
 
-**Install the `tidyverse` and `palmerpenguins` R packages** using the following code:
+**[Install `git`](https://happygitwithr.com/install-git.html)**
 
-```{r, eval = F}
-install.packages("tidyverse", "palmerpenguins")
-library(tidyverse)
-library(palmerpenguins)
+**If you are a Windows user**, be sure to follow along with "Option 1" in the instructions linked above! That variant gives some under-the-hood tools we'll implicitly rely on later.
+  
+## Accounts to Create / Connect
+
+### GitHub
+
+**[Create a GitHub account](https://happygitwithr.com/github-acct.html)** using your web browser of choice.
+
+**[Connect `git` to your GitHub profile](https://happygitwithr.com/hello-git.html)**. You may want to [review the "shell"](https://happygitwithr.com/shell.html#shell) (also known as the "terminal" or "command line") to help with this step.
+
+**Create a personal access token (PAT)**. A token is essentially a more secure password that `git` requires and you can create one by running the following code in RStudio:
+
+```{r token-process, eval = FALSE}
+# Install the `usethis` and `gitcreds` packages
+#install.packages(c("usethis", "gitcreds"))
+library(usethis); library(gitcreds)
+
+# Add your GitHub username and email
+usethis::use_git_config(user.name = "Jane Doe",
+                        user.email = "jane@example.org")
+
+# Create a token (Note this will open a GitHub browser tab)
+# See steps 6-10 in GitHub's tutorial (link below)
+usethis::create_github_token()
+
+# Copy your Personal Access Token at the end of the above step!
+
+# Now, give your token to RStudio
+# After you run this line you'll follow some prompts in the "Console" tab of RStudio
+gitcreds::gitcreds_set()
 ```
 
-**Please run the above code even if you already have these packages** to update these packages and ensure that your code aligns with the examples and challenges introduced during the workshop.
+At the end of the above steps your token should be set! For additional information, see [GitHub's PAT Tutorial](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or the [Happy Git with R PAT Tutorial](https://happygitwithr.com/https-pat.html). If this seems a little intimidating, please keep in mind that your experience with downloading programs and creating web accounts will help with these tasks even if you have more minimal coding experience!
 
 ## Websites to Visit
 
 ### Supplemental Material
 
-While not technically necessary to attend the workshop, if you'd like you can see the content that created the workshop website you are viewing by visiting our [GitHub repository here](https://github.com/NCEAS/scicomp-workshop-tidyverse).
+While not technically necessary to attend the workshop, if you'd like you can see the content that created the workshop website you are viewing by visiting our [GitHub repository here](https://github.com/NCEAS/scicomp-workshop-collaborative-coding).
