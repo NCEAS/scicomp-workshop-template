@@ -9,7 +9,7 @@ execute:
 website:
   title: "Sci Comp Workshop - GitHub"
   favicon: images/scicomptools_hex.png
-  repo-url: https://nceas.github.io/scicomp-workshop-collaborative-coding/
+  repo-url: https://github.com/NCEAS/scicomp-workshop-collaborative-coding
   repo-actions: [issue]
   twitter-card: true
   navbar:
@@ -28,7 +28,7 @@ website:
       - about.qmd
     right:
       - icon: github
-        href: https://nceas.github.io/scicomp-workshop-collaborative-coding/
+        href: https://github.com/NCEAS/scicomp-workshop-collaborative-coding
   page-footer:
     center: "Copyright 2022, NCEAS"
     background: secondary
