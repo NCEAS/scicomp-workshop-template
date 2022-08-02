@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Sci Comp Workshop - GitHub - RStudio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/scicomptools_hex.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta name="twitter:title" content="Sci Comp Workshop - GitHub - RStudio">
+<meta name="twitter:description" content="Before we get into using git and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Sci Comp Workshop - GitHub</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./motivations.html">Workflows</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./github.html">GitHub</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./rstudio.html" aria-current="page">RStudio</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./issues.html">Issues</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conflicts.html">Conflicts</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./branches.html">Branches</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./forks.html">Forks</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./server.html">Server</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">Content Creators</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://nceas.github.io/scicomp-workshop-collaborative-coding/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#brief-overview-of-git-workflow" id="toc-brief-overview-of-git-workflow" class="nav-link active" data-scroll-target="#brief-overview-of-git-workflow">Brief Overview of <code>git</code> Workflow</a></li>
+  <li><a href="#git-vocabulary" id="toc-git-vocabulary" class="nav-link" data-scroll-target="#git-vocabulary"><code>git</code> Vocabulary</a></li>
+  <li><a href="#cloning-a-repository" id="toc-cloning-a-repository" class="nav-link" data-scroll-target="#cloning-a-repository">Cloning a Repository</a></li>
+  <li><a href="#git-workflow-overview-reminder" id="toc-git-workflow-overview-reminder" class="nav-link" data-scroll-target="#git-workflow-overview-reminder"><code>git</code> Workflow Overview Reminder</a></li>
+  <li><a href="#creating-a-new-file" id="toc-creating-a-new-file" class="nav-link" data-scroll-target="#creating-a-new-file">Creating a New File</a>
+  <ul class="collapse">
+  <li><a href="#adding-our-script-to-the-next-commit" id="toc-adding-our-script-to-the-next-commit" class="nav-link" data-scroll-target="#adding-our-script-to-the-next-commit">Adding our Script to the Next Commit</a></li>
+  <li><a href="#getting-the-latest-updates" id="toc-getting-the-latest-updates" class="nav-link" data-scroll-target="#getting-the-latest-updates">Getting the Latest Updates</a></li>
+  <li><a href="#sending-changes-back-to-github" id="toc-sending-changes-back-to-github" class="nav-link" data-scroll-target="#sending-changes-back-to-github">Sending Changes back to GitHub</a></li>
+  <li><a href="#rinse-and-repeat" id="toc-rinse-and-repeat" class="nav-link" data-scroll-target="#rinse-and-repeat">Rinse and Repeat</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-git"></i></div><div class="action-links"><p><a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">RStudio</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="brief-overview-of-git-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="brief-overview-of-git-workflow">Brief Overview of <code>git</code> Workflow</h2>
+<p><img src="images/nceas_logo_square.png" align="right" width="15%"></p>
+<p>Before we get into using <code>git</code> and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.</p>
+<p>Beginning on your local computer, you make <strong><span style="color:gold">changes</span></strong> to a file in a folder that you have previously marked for version control tracking (i.e., a <strong>working directory</strong>). Once those changes are made you can <strong>stage changes</strong> within your local computer. After staging you can <span style="color:green">shift the revised file to the cloud</span> where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes. Finally, you (or your collaborators) can <span style="color:blue">retrieve the latest file versions from the cloud</span>.</p>
+<p><img src="images/git-workflow.png" class="img-fluid"></p>
+</section>
+<section id="git-vocabulary" class="level2">
+<h2 class="anchored" data-anchor-id="git-vocabulary"><code>git</code> Vocabulary</h2>
+<p>Finally, it will be helpful to introduce four key pieces of vocabulary before we dive into the interactive component of this workshop.</p>
+<ul>
+<li><p><strong><span style="color:purple">Clone</span></strong> = copy the entire contents of a GitHub repository to your local computer (done once per computer)</p></li>
+<li><p><strong><span style="color:gray">Commit</span></strong> = move a changed local file to your local staging area (step 2 of the above diagram)</p></li>
+<li><p><strong><span style="color:blue">Pull</span></strong> = get file(s) <em>from</em> the cloud <em>to</em> your local computer – opposite of a “push” (step 3)</p></li>
+<li><p><strong><span style="color:green">Push</span></strong> = move file(s) <em>to</em> the cloud <em>from</em> your local computer – opposite of a “pull” (step 4)</p></li>
+</ul>
+<p><img src="images/git-vocabulary.png" class="img-fluid"></p>
+</section>
+<section id="cloning-a-repository" class="level2">
+<h2 class="anchored" data-anchor-id="cloning-a-repository">Cloning a Repository</h2>
+<p>Now, the first step in using <code>git</code> with RStudio is cloning the repository from GitHub. Note for clarity that in the screenshots below, <strong>GitHub is in dark mode</strong> while <strong>RStudio is in light mode</strong>. To clone a repository, follow these steps:</p>
+<ul>
+<li>Navigate to the repository on GitHub and click on <strong><span style="color:green">Code</span></strong>. Select <strong>HTTPS</strong> and copy the link.</li>
+</ul>
+<p><img src="images/rstudio-6-new-repo-link.png" class="img-fluid"></p>
+<ul>
+<li>Open up RStudio.</li>
+</ul>
+<p><img src="images/rstudio-7-fresh-start.png" class="img-fluid"></p>
+<ul>
+<li>Go to the <strong>Project</strong> tab on the top right corner and click <strong>New Project…</strong></li>
+</ul>
+<p><img src="images/rstudio-8-new-project.png" class="img-fluid"></p>
+<ul>
+<li>Select <strong>Version Control</strong>.</li>
+</ul>
+<p><img src="images/rstudio-9-version-control.png" class="img-fluid"></p>
+<ul>
+<li>Select <strong><code>git</code></strong>.</li>
+</ul>
+<p><img src="images/rstudio-10-clone.png" class="img-fluid"></p>
+<ul>
+<li>Paste the repository URL that you just copied. Choose a file path to save your project to.</li>
+</ul>
+<p><img src="images/rstudio-11-clone-repo-details.png" class="img-fluid"></p>
+<p>Now we have finished cloning the repository to our RStudio! Notice that we are working in our <code>git-practice</code> project and that our <code>README.md</code> file shows up under the list of files, just like in our GitHub repository.</p>
+<p><img src="images/rstudio-12-finished-cloning.png" class="img-fluid"></p>
+</section>
+<section id="git-workflow-overview-reminder" class="level2">
+<h2 class="anchored" data-anchor-id="git-workflow-overview-reminder"><code>git</code> Workflow Overview Reminder</h2>
+<p>The typical workflow with <code>git</code> goes like this:</p>
+<p><strong>Step 1</strong>: You modify files in your working directory and save them as usual.</p>
+<p><strong>Step 2</strong>: You <strong>stage</strong> files to mark your intention to “commit” them (in RStudio this is done by checking the box next to the file in the “Git” tab).</p>
+<p><strong>Step 3</strong>: You <strong>commit</strong> the staged files, which permanently stores them as snapshots to your <code>git</code> directory.</p>
+<p>We can make an analogy with taking a family picture, where each family member would represent a file.</p>
+<ul>
+<li><strong>Staging</strong> files is like deciding which family member(s) are going to be on your next picture</li>
+<li><strong>Committing</strong> is like taking the picture</li>
+</ul>
+<p>This 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you’re trying to find what you changed for a specific task (because those changes likely are all in the same commit)</p>
+<p>Here is the infographic from the start of this chapter again, which shows the same workflow:</p>
+<p><img src="images/git-workflow.png" class="img-fluid"></p>
+</section>
+<section id="creating-a-new-file" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-new-file">Creating a New File</h2>
+<p>Let’s try out a simple <code>git</code> workflow by first creating a new file. This is <strong>Step 1</strong> of the process. We can add new R scripts and files to our repository through RStudio. Try creating a new script by going to <strong>File</strong> &gt; <strong>New File</strong> &gt; <strong>R Script</strong>. Feel free to type anything you want into this script as an example. Name this script after yourself. In the screenshot below, I have named my script <code>angel-script.R</code>.</p>
+<p>Once you are done, navigate to the <strong><code>git</code></strong> tab on the upper left corner. You should see your new script show up there along with a <code>.gitignore</code> and <code>git-practice.Rproj</code> file. Do not worry about the <code>.gitignore</code> file for now, it was created by RStudio to make sure that some temporary files are not tracked by <code>git</code>. The <code>git-practice.Rproj</code> file will save your settings and open tabs when you close the project, and will restore these settings the next time you open it.</p>
+<p><img src="images/rstudio-13-new-script.png" class="img-fluid"> Notice that there are color-coded icons next to the files in the “Git” tab. These icons are shorthand for the status–according to <code>git</code>–of every* file in your working directory. Not technically “every” file because files that are tracked but haven’t been modified are not included. See below for definitions.</p>
+<p><img src="images/rstudio-icons.png" class="img-fluid"> In our case, it means that our R script, <code>.gitignore</code>, and <code>git-practice.Rproj</code> files have never been tracked by <code>git</code> (since these files were just created). Note also that the <code>README.md</code> file is not listed, but it exists (check the Files pane). It is because files that are tracked but have no modifications since the last commit are not listed.</p>
+<section id="adding-our-script-to-the-next-commit" class="level3">
+<h3 class="anchored" data-anchor-id="adding-our-script-to-the-next-commit">Adding our Script to the Next Commit</h3>
+<p>Let us look at the diff of our script. Click on the <strong>Diff</strong> tab.</p>
+<p><img src="images/rstudio-13c-diff.png" class="img-fluid"></p>
+<p>Checking our script, we can see the new lines that we just typed are in green, which indicates that these lines have been added for <code>git</code>. We would like to save a snapshot of this version of our script. Since we’ve just done <strong>Step 1</strong>, here are the rest of the steps we will need to do to get our script to show up on our GitHub repository:</p>
+<p><strong>Step 2</strong>: Add the file to the next commit by checking the box in front of the file name. Note that the two <code>?</code> icons will change to a single <code>A</code> on the left to show you that this file is now staged to be part of the next commit.</p>
+<p><strong>Step 3</strong>: In the right pane, type a short but descriptive commit message detailing what you have done so far. Then click on the <strong>Commit</strong> button to save this version of the script in the <code>git</code> database.</p>
+<p><img src="images/rstudio-14-commit-message.png" class="img-fluid"> If you did all the steps correctly, you should see something like this:</p>
+<p><img src="images/rstudio-15-finished-commiting.png" class="img-fluid"> Notice that <code>git</code> tells us that <code>1 file changed</code> because we’ve just added a new file to our commit. Now close the window. Before sending our changes back to GitHub, we should make sure that the copy of the repository on RStudio is completely up-to-date with the one on GitHub to avoid any conflicts.</p>
+</section>
+<section id="getting-the-latest-updates" class="level3">
+<h3 class="anchored" data-anchor-id="getting-the-latest-updates">Getting the Latest Updates</h3>
+<p>There are two <code>git</code> commands to exchange between a local and remote versions of a repository:</p>
+<ul>
+<li><p><code>pull</code>: <code>git</code> will get the latest remote version and try to merge it with your local version</p></li>
+<li><p><code>push</code>: <code>git</code> will send your local version to the remote version of the repository (in our case GitHub)</p></li>
+</ul>
+<p><strong>Before sending your local version to the remote</strong>, you should always get the latest remote version first. In other words, you should pull first and push second. This is the way <code>git</code> protects the remote version against incompatibilities with the local version. You always deal with potential problems on your local machine. Therefore your sequence will always be:</p>
+<ol type="1">
+<li>Commit</li>
+<li><code>pull</code></li>
+<li><code>push</code></li>
+</ol>
+<p>Of course RStudio has icons for that on top of the “Git” tab, with the blue arrow down being for pull and the green arrow up being for push. Remember the icons are organized in sequence!</p>
+<p>Let us do the pull and push to synchronized the remote repositories. Click on the <strong>Pull</strong> button to pull changes (if any) from the GitHub repository to the copy on RStudio. We have now synchronized the local (our computer) and remote (on GitHub) versions of our repository. You may have noticed that all of our preceding graphics use <strong><span style="color:blue">blue</span></strong> for <strong>pull</strong>-related content and <strong><span style="color:green">green</span></strong> for <strong>push</strong>-related information. Hopefully that helps cement the two ideas in your mind!</p>
+<p><img src="images/rstudio-15b-pull.png" class="img-fluid"></p>
+<p>In my case, it turns out that a new script, <code>lyon-script</code>, was added to the GitHub repository by a collaborator while I was making my own script. Since I have just pulled, <code>lyon-script</code> now shows up in my RStudio files.</p>
+<p><img src="images/rstudio-16-pulled.png" class="img-fluid"> <img src="images/rstudio-17-finished-pulling-new-script.png" class="img-fluid"> A new message has popped up for me: “Your branch is ahead of ‘origin/main’ by two commits”. This means that I have two additional commits on my local machine that I never shared back to the remote repository on GitHub. If I look at the content of my repository on GitHub, I will see just the <code>README.md</code> and <code>lyon-script</code>. My changes are NOT in the cloud yet. You might be seeing a similar message as well.</p>
+</section>
+<section id="sending-changes-back-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="sending-changes-back-to-github">Sending Changes back to GitHub</h3>
+<p>So how do we send our changes back to GitHub? Locate the <strong>Push</strong> button on the “Git” tab and click on it. Now your script should show up in the GitHub repository!</p>
+<p><img src="images/rstudio-15b-pull.png" class="img-fluid"></p>
+<p><img src="images/rstudio-18-pushed.png" class="img-fluid"> Navigate back to the GitHub website and find your repository. Check to see if your script has been added correctly. In my case, <code>angel-script.R</code> finally shows up in my repository.</p>
+<p><img src="images/rstudio-19-updated-repo.png" class="img-fluid"></p>
+</section>
+<section id="rinse-and-repeat" class="level3">
+<h3 class="anchored" data-anchor-id="rinse-and-repeat">Rinse and Repeat</h3>
+<p>Great! Now that your script has been added to the group repository, you should try to repeat the same workflow over again just to get a feel for how it works. Go back to RStudio and edit your own script. Save those edits, add your edited file to the staging area, write a commit message, then commit your changes. After committing, make sure to pull first then push after! When you pull, you might notice that scripts from your group members/collaborators will show up in your RStudio files.</p>
+<p>Make sure to work on your own script. If you and another group member work on the same script at the same time, this may lead to merge conflicts with <code>git</code>. If two people were to work on the same script, they may be making different edits on the same lines, and <code>git</code> would not know which edits to keep. To avoid merge conflicts, be mindful of what files you are working on and always communicate this to your group members!</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Copyright 2022, NCEAS</div>
+  </div>
+</footer>
+
+
+
+</body></html>
