@@ -4,8 +4,6 @@ title: "RStudio"
 
 ## Brief Overview of `git` Workflow
 
-<img src="images/nceas_logo_square.png" align="right" width="15%" />
-
 Before we get into using `git` and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.
 
 Beginning on your local computer, you make **<span style="color:gold">changes</span>** to a file in a folder that you have previously marked for version control tracking (i.e., a **working directory**). Once those changes are made you can **stage changes** within your local computer. After staging you can <span style="color:green">shift the revised file to the cloud</span> where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes. Finally, you (or your collaborators) can <span style="color:blue">retrieve the latest file versions from the cloud</span>.

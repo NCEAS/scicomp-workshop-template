@@ -141,7 +141,9 @@ ul.task-list{list-style: none;}
   <li><a href="#update-local-repository" id="toc-update-local-repository" class="nav-link" data-scroll-target="#update-local-repository">Update Local Repository</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/NCEAS/scicomp-workshop-collaborative-coding/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-    </div>
+    <div class="quarto-margin-footer"><div class="margin-footer-item">
+<p><img src="images/nceas_logo_square.png" width="40%"> <img src="images/lter_logo_square.png" width="40%"></p>
+</div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -163,7 +165,6 @@ ul.task-list{list-style: none;}
 
 <section id="what-is-a-branch" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-branch">What is a Branch?</h2>
-<p><img src="images/nceas_logo_square.png" align="right" width="15%"></p>
 <p>A <strong>branch</strong> is essentially a working environment in your <code>git</code> repository that is separate from your main working area. This can be incredibly useful when you have a task to work on but you don’t want to risk damaging the version of your code that already works. Note that “branch” can be either a noun or a verb as with many of the <code>git</code> vocabulary words discussed earlier (e.g., “commit”, “push”, etc.).</p>
 <p>Branches are typically created with <strong>the intent to put the work in the branch back into the main branch when you are done with it.</strong> Implicit in that rationale is the fact that most branches are created with a specific task/sub-task in mind and known to be temporary from the outset.</p>
 <p>As an example, imagine that you want to put a better engine in your car but you don’t want to risk damaging your car as you go about that job. In <code>git</code> terms you could create a branch to work on those mechanical improvements while at the same time preserving your original car separately (in the “main” branch). When you’re done experimenting and happy with the new version of your car, you can merge the two cars keeping all of the improvements you made in your branch.</p>

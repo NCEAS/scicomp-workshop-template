@@ -4,8 +4,6 @@ title: "Workflows"
 
 ## Workflow Options
 
-<img src="images/nceas_logo_square.png" align="right" width="15%" />
-
 If you are working on any file that is the product of iterative edits, you have had to develop a workflow to approach that task. This could be a scientific paper, analytic code, or a presentation. There are many possible ways you could approach this task leveraging any number of software and hardware options but before we get into our discussion today about collaborative research using GitHub we would like to--briefly--outline some of the typical forms these workflows can take and how they fit into a broader framework of individual and synthesis science.
 
 ### Individual Workflow

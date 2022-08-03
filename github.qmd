@@ -4,8 +4,6 @@ title: "GitHub"
 
 ## Version Control Background
 
-<img src="images/nceas_logo_square.png" align="right" width="15%" />
-
 Version control systems (including `git`) are built to preserve the iterative versions that we create on the way to a final product. For instance, when writing a scientific manuscript we might have several discrete stages (e.g., separate drafts after successive rounds of feedback from collaborators) as well as the sort of small-scale changes we don't necessarily preserve in separate files (e.g., workshopping a particular sentence for rhetorical flow).
 
 **Version control systems provide a framework for preserving these changes without cluttering your computer with all of the files that precede the final version.**

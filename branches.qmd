@@ -4,8 +4,6 @@ title: "Branches"
 
 ## What is a Branch?
 
-<img src="images/nceas_logo_square.png" align="right" width="15%" />
-
 A **branch** is essentially a working environment in your `git` repository that is separate from your main working area. This can be incredibly useful when you have a task to work on but you don't want to risk damaging the version of your code that already works. Note that "branch" can be either a noun or a verb as with many of the `git` vocabulary words discussed earlier (e.g., "commit", "push", etc.).
 
 Branches are typically created with **the intent to put the work in the branch back into the main branch when you are done with it.** Implicit in that rationale is the fact that most branches are created with a specific task/sub-task in mind and known to be temporary from the outset.

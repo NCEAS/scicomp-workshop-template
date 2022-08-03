@@ -4,8 +4,6 @@ title: "Issues"
 
 ## What is an Issue?
 
-<img src="images/nceas_logo_square.png" align="right" width="15%" />
-
 Issues are a convenient way of identifying and delegating tasks within a repository as well as documenting progress over time. They can also be used as a digital 'lab notebook' for personal use to brainstorm on a novel topic or preserve important links or supplementary material for easy distribution across a whole team.
 
 Importantly, while issues can definitely be helpful they are *not* required to successfully use GitHub for collaborating as a team. Issues absolutely have the potential to facilitate division of labor within a team though and are thus worth covering in this training.
