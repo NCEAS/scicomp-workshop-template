@@ -9,7 +9,7 @@ execute:
 website:
   title: "NCEAS Sci Comp Workshop - Template"
   favicon: images/scicomptools_hex.png
-  repo-url: https://nceas.github.io/scicomp-workshop-template/
+  repo-url: https://github.com/NCEAS/scicomp-workshop-template
   repo-actions: [issue]
   twitter-card: true
   navbar:
@@ -21,10 +21,13 @@ website:
       - about.qmd
     right:
       - icon: github
-        href: https://nceas.github.io/scicomp-workshop-template/
+        href: https://github.com/NCEAS/scicomp-workshop-template
   page-footer:
     center: "Copyright 2022, NCEAS"
     background: secondary
+  margin-footer: |
+    <img src="images/nceas_logo_square.png" width="40%"/>
+    <img src="images/lter_logo_square.png" width="40%"/>
 
 format:
   html:

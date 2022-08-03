@@ -7,6 +7,13 @@
     "text": "Duplicate this file (or create new .qmd files) for each major section of the workshop. **Remember to add it to the “_quarto.yml” and run quarto render in the Terminal to add the page to the deployed website!**\n\n\nIt is worthwhile to use two “#” for headings and three “#” for subheadings to that the live table of the contents on the right hand side of the deployed website allows easy navigation among sections."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "A short blurb on the topic of the workshop should be covered here. Strive to be welcoming and nonthreatening as this page includes our ‘before you arrive’ instructions and thus precedes workshop participants actually meeting us in person (or via Zoom).\nWe are always happy to improve workshop content so please don’t hesitate to post an Issue on our GitHub repository if you see clear areas for improvement!\nTo maximize the value of this workshop to you, we recommend you take the following steps before the day of the workshop. If anything is unclear, feel free to reach out to us; our contact information can be found in the “Content Creators” tab."
+  },
+  {
     "objectID": "index.html#programs-to-install",
     "href": "index.html#programs-to-install",
     "title": "Overview",

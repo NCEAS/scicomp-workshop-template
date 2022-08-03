@@ -2,8 +2,6 @@
 title: "Overview"
 ---
 
-<img src = "images/nceas_logo_wide.png" align = "right" width = "50%" />
-
 ### Welcome!
 
 A short blurb on the topic of the workshop should be covered here. Strive to be welcoming and nonthreatening as this page includes our 'before you arrive' instructions and thus precedes workshop participants actually meeting us in person (or via Zoom).
