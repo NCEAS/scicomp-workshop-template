@@ -6,7 +6,7 @@ title: "RStudio"
 
 Before we get into using `git` and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.
 
-Beginning on your local computer, you make **<span style="color:gold">changes</span>** to a file in a folder that you have previously marked for version control tracking (i.e., a **working directory**). Once those changes are made you can **stage changes** within your local computer. After staging you can <span style="color:green">shift the revised file to the cloud</span> where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes. Finally, you (or your collaborators) can <span style="color:blue">retrieve the latest file versions from the cloud</span>.
+Beginning on your local computer, you make **<span style="color:gold">changes</span>** to a file in a folder that you have previously marked for version control tracking (i.e., a **working directory**). Once those changes are made you can **stage changes** within your local computer. After staging, it is best to <span style="color:blue">retrieve the latest file versions from the cloud</span>. You likely will already be up-to-date but this preemptive step can save you a lot of heartache down the line. Once you've confirmed that you have the latest file versions, you can <span style="color:green">shift the revised file(s) to the cloud</span> where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes.
 
 ![](images/git-workflow.png)
 
@@ -62,20 +62,27 @@ The typical workflow with `git` goes like this:
 
 **Step 1**: You modify files in your working directory and save them as usual.
 
-**Step 2**: You **stage** files to mark your intention to "commit" them (in RStudio this is done by checking the box next to the file in the "Git" tab).
+**Step 2**: You **stage** files to mark your intention to "commit" them and then **commit** that version of those files.
 
-**Step 3**: You **commit** the staged files, which permanently stores them as snapshots to your `git` directory.
+    - In RStudio, "staging" is done by checking the box next to a given file in the "Git" tab
+    - Committing files permanently stores them as snapshots to your `git` directory
 
-We can make an analogy with taking a family picture, where each family member would represent a file.
+**Step 3**: You **pull** the most recent changes to make sure you've been editing the latest versions.
 
-- **Staging** files is like deciding which family member(s) are going to be on your next picture
-- **Committing** is like taking the picture
-
-This 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you're trying to find what you changed for a specific task (because those changes likely are all in the same commit)
+**Step 4**: You **push** your the version of your files that you committed to GitHub.
 
 Here is the infographic from the start of this chapter again, which shows the same workflow:
 
-![](images/git-workflow.png)
+<img src="images/git-workflow.png" width="75%"/>
+
+## Stage versus Commit
+
+The functional difference between "staging" a file and "committing" one can be a little tough to grasp at first so let's explore that briefly here. We can make an analogy with taking a family picture, where each family member would represent a file.
+
+- **Staging** files is like deciding which family member(s) are going to be in your next picture
+- **Committing** is like taking the picture
+
+This 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you're trying to find what you changed for a specific task (because those changes likely are all in the same commit).
 
 ## Creating a New File
 

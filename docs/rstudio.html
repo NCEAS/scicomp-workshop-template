@@ -137,6 +137,7 @@ ul.task-list{list-style: none;}
   <li><a href="#git-vocabulary" id="toc-git-vocabulary" class="nav-link" data-scroll-target="#git-vocabulary"><code>git</code> Vocabulary</a></li>
   <li><a href="#cloning-a-repository" id="toc-cloning-a-repository" class="nav-link" data-scroll-target="#cloning-a-repository">Cloning a Repository</a></li>
   <li><a href="#git-workflow-overview-reminder" id="toc-git-workflow-overview-reminder" class="nav-link" data-scroll-target="#git-workflow-overview-reminder"><code>git</code> Workflow Overview Reminder</a></li>
+  <li><a href="#stage-versus-commit" id="toc-stage-versus-commit" class="nav-link" data-scroll-target="#stage-versus-commit">Stage versus Commit</a></li>
   <li><a href="#creating-a-new-file" id="toc-creating-a-new-file" class="nav-link" data-scroll-target="#creating-a-new-file">Creating a New File</a>
   <ul class="collapse">
   <li><a href="#adding-our-script-to-the-next-commit" id="toc-adding-our-script-to-the-next-commit" class="nav-link" data-scroll-target="#adding-our-script-to-the-next-commit">Adding our Script to the Next Commit</a></li>
@@ -171,7 +172,7 @@ ul.task-list{list-style: none;}
 <section id="brief-overview-of-git-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="brief-overview-of-git-workflow">Brief Overview of <code>git</code> Workflow</h2>
 <p>Before we get into using <code>git</code> and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.</p>
-<p>Beginning on your local computer, you make <strong><span style="color:gold">changes</span></strong> to a file in a folder that you have previously marked for version control tracking (i.e., a <strong>working directory</strong>). Once those changes are made you can <strong>stage changes</strong> within your local computer. After staging you can <span style="color:green">shift the revised file to the cloud</span> where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes. Finally, you (or your collaborators) can <span style="color:blue">retrieve the latest file versions from the cloud</span>.</p>
+<p>Beginning on your local computer, you make <strong><span style="color:gold">changes</span></strong> to a file in a folder that you have previously marked for version control tracking (i.e., a <strong>working directory</strong>). Once those changes are made you can <strong>stage changes</strong> within your local computer. After staging, it is best to <span style="color:blue">retrieve the latest file versions from the cloud</span>. You likely will already be up-to-date but this preemptive step can save you a lot of heartache down the line. Once you’ve confirmed that you have the latest file versions, you can <span style="color:green">shift the revised file(s) to the cloud</span> where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes.</p>
 <p><img src="images/git-workflow.png" class="img-fluid"></p>
 </section>
 <section id="git-vocabulary" class="level2">
@@ -219,16 +220,22 @@ ul.task-list{list-style: none;}
 <h2 class="anchored" data-anchor-id="git-workflow-overview-reminder"><code>git</code> Workflow Overview Reminder</h2>
 <p>The typical workflow with <code>git</code> goes like this:</p>
 <p><strong>Step 1</strong>: You modify files in your working directory and save them as usual.</p>
-<p><strong>Step 2</strong>: You <strong>stage</strong> files to mark your intention to “commit” them (in RStudio this is done by checking the box next to the file in the “Git” tab).</p>
-<p><strong>Step 3</strong>: You <strong>commit</strong> the staged files, which permanently stores them as snapshots to your <code>git</code> directory.</p>
-<p>We can make an analogy with taking a family picture, where each family member would represent a file.</p>
+<p><strong>Step 2</strong>: You <strong>stage</strong> files to mark your intention to “commit” them and then <strong>commit</strong> that version of those files.</p>
+<pre><code>- In RStudio, "staging" is done by checking the box next to a given file in the "Git" tab
+- Committing files permanently stores them as snapshots to your `git` directory</code></pre>
+<p><strong>Step 3</strong>: You <strong>pull</strong> the most recent changes to make sure you’ve been editing the latest versions.</p>
+<p><strong>Step 4</strong>: You <strong>push</strong> your the version of your files that you committed to GitHub.</p>
+<p>Here is the infographic from the start of this chapter again, which shows the same workflow:</p>
+<p><img src="images/git-workflow.png" width="75%"></p>
+</section>
+<section id="stage-versus-commit" class="level2">
+<h2 class="anchored" data-anchor-id="stage-versus-commit">Stage versus Commit</h2>
+<p>The functional difference between “staging” a file and “committing” one can be a little tough to grasp at first so let’s explore that briefly here. We can make an analogy with taking a family picture, where each family member would represent a file.</p>
 <ul>
-<li><strong>Staging</strong> files is like deciding which family member(s) are going to be on your next picture</li>
+<li><strong>Staging</strong> files is like deciding which family member(s) are going to be in your next picture</li>
 <li><strong>Committing</strong> is like taking the picture</li>
 </ul>
-<p>This 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you’re trying to find what you changed for a specific task (because those changes likely are all in the same commit)</p>
-<p>Here is the infographic from the start of this chapter again, which shows the same workflow:</p>
-<p><img src="images/git-workflow.png" class="img-fluid"></p>
+<p>This 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you’re trying to find what you changed for a specific task (because those changes likely are all in the same commit).</p>
 </section>
 <section id="creating-a-new-file" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-new-file">Creating a New File</h2>

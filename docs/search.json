@@ -242,7 +242,7 @@
     "href": "rstudio.html",
     "title": "RStudio",
     "section": "",
-    "text": "Before we get into using git and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.\nBeginning on your local computer, you make changes to a file in a folder that you have previously marked for version control tracking (i.e., a working directory). Once those changes are made you can stage changes within your local computer. After staging you can shift the revised file to the cloud where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes. Finally, you (or your collaborators) can retrieve the latest file versions from the cloud."
+    "text": "Before we get into using git and GitHub through RStudio, it will be helpful to review the major steps of including version control as you work on code.\nBeginning on your local computer, you make changes to a file in a folder that you have previously marked for version control tracking (i.e., a working directory). Once those changes are made you can stage changes within your local computer. After staging, it is best to retrieve the latest file versions from the cloud. You likely will already be up-to-date but this preemptive step can save you a lot of heartache down the line. Once you’ve confirmed that you have the latest file versions, you can shift the revised file(s) to the cloud where any GitHub users with access to your project can access the most recent file and look at the history of all previous changes."
   },
   {
     "objectID": "rstudio.html#git-vocabulary",
@@ -263,7 +263,14 @@
     "href": "rstudio.html#git-workflow-overview-reminder",
     "title": "RStudio",
     "section": "git Workflow Overview Reminder",
-    "text": "git Workflow Overview Reminder\nThe typical workflow with git goes like this:\nStep 1: You modify files in your working directory and save them as usual.\nStep 2: You stage files to mark your intention to “commit” them (in RStudio this is done by checking the box next to the file in the “Git” tab).\nStep 3: You commit the staged files, which permanently stores them as snapshots to your git directory.\nWe can make an analogy with taking a family picture, where each family member would represent a file.\n\nStaging files is like deciding which family member(s) are going to be on your next picture\nCommitting is like taking the picture\n\nThis 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you’re trying to find what you changed for a specific task (because those changes likely are all in the same commit)\nHere is the infographic from the start of this chapter again, which shows the same workflow:"
+    "text": "git Workflow Overview Reminder\nThe typical workflow with git goes like this:\nStep 1: You modify files in your working directory and save them as usual.\nStep 2: You stage files to mark your intention to “commit” them and then commit that version of those files.\n- In RStudio, \"staging\" is done by checking the box next to a given file in the \"Git\" tab\n- Committing files permanently stores them as snapshots to your `git` directory\nStep 3: You pull the most recent changes to make sure you’ve been editing the latest versions.\nStep 4: You push your the version of your files that you committed to GitHub.\nHere is the infographic from the start of this chapter again, which shows the same workflow:"
+  },
+  {
+    "objectID": "rstudio.html#stage-versus-commit",
+    "href": "rstudio.html#stage-versus-commit",
+    "title": "RStudio",
+    "section": "Stage versus Commit",
+    "text": "Stage versus Commit\nThe functional difference between “staging” a file and “committing” one can be a little tough to grasp at first so let’s explore that briefly here. We can make an analogy with taking a family picture, where each family member would represent a file.\n\nStaging files is like deciding which family member(s) are going to be in your next picture\nCommitting is like taking the picture\n\nThis 2-step process enables you to flexibly group files into a specific commit. Those groupings can be helpful to you later if you’re trying to find what you changed for a specific task (because those changes likely are all in the same commit)."
   },
   {
     "objectID": "rstudio.html#creating-a-new-file",
