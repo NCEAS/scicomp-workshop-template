@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./github.html">
- <span class="dropdown-text">GitHub</span></a>
+ <span class="dropdown-text"><code>git</code> &amp; GitHub</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./rstudio.html">
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
   <li class="nav-item">
     <a class="nav-link" href="./server.html">
- <span class="menu-text">Server</span></a>
+ <span class="menu-text">NCEAS’ Server</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html">
@@ -178,12 +178,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#synthesis-workflow" id="toc-synthesis-workflow" class="nav-link" data-scroll-target="#synthesis-workflow">Synthesis Workflow</a></li>
   <li><a href="#synthesis-workflow-on-nceas-server" id="toc-synthesis-workflow-on-nceas-server" class="nav-link" data-scroll-target="#synthesis-workflow-on-nceas-server">Synthesis Workflow on NCEAS’ Server</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  </ul></li>
-  <li><a href="#getting-started-on-nceas-server" id="toc-getting-started-on-nceas-server" class="nav-link" data-scroll-target="#getting-started-on-nceas-server">Getting Started on NCEAS’ Server</a>
-  <ul class="collapse">
-  <li><a href="#necessary-software" id="toc-necessary-software" class="nav-link" data-scroll-target="#necessary-software">Necessary Software</a></li>
-  <li><a href="#get-your-invite-ready" id="toc-get-your-invite-ready" class="nav-link" data-scroll-target="#get-your-invite-ready">Get your Invite Ready!</a></li>
-  <li><a href="#signing-into-the-server" id="toc-signing-into-the-server" class="nav-link" data-scroll-target="#signing-into-the-server">Signing into the Server</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/NCEAS/scicomp-workshop-collaborative-coding/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -251,42 +245,6 @@ ul.task-list li input[type="checkbox"] {
 <p>While each approach offers its own strengths and weaknesses, in our experience many scientists avoid the latter two options due to knowledge barriers about how to get set up in these programs and websites, much less how to actually navigate those systems once set up!</p>
 <p>Today, we will strive to cover the fundamentals of using a version control system in your workflow (Option 2) and–for some groups, depending on interest–how to extend that workflow further and leverage NCEAS’ server to share data and work on code.</p>
 <p>Please don’t hesitate to ask questions and remember that this link is a resource that you should feel free to refer back to if you ever need a refresher or wish to teach peers! There are supplementary appendices as well which we do not anticipate being able to get to today but we do think are likely to be valuable to you as your confidence with these systems grows.</p>
-</section>
-</section>
-<section id="getting-started-on-nceas-server" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-on-nceas-server">Getting Started on NCEAS’ Server</h2>
-<section id="necessary-software" class="level3">
-<h3 class="anchored" data-anchor-id="necessary-software">Necessary Software</h3>
-<p>The only tool that you will need to get set up on NCEAS’ server is RStudio!</p>
-<p>You likely have worked in the “Console” tab of RStudio (where run lines and outputs appear; see below) but RStudio has another tab to the right of the “Console” called “Terminal” which offers RStudio users access to the <strong>command line</strong> (a.k.a. the <strong>shell</strong>). If you are a veteran command line user you may prefer to use the standalone Terminal app on MacOS or <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> on Windows but for the sake of keeping your tool kit streamlined, we’ll walk through getting set up on NCEAS’ server using only RStudio’s Terminal tab.</p>
-<p><img src="images/server-login-1-console.png" class="img-fluid"></p>
-<p>The Terminal does not accept R syntax (and the Console doesn’t accept Terminal syntax) so you may notice that some of the code we’ll walk you through below is formatted differently than you would write an R script.</p>
-<p><img src="images/server-login-2-terminal.png" class="img-fluid"></p>
-</section>
-<section id="get-your-invite-ready" class="level3">
-<h3 class="anchored" data-anchor-id="get-your-invite-ready">Get your Invite Ready!</h3>
-<p>After your group RSVP’d for this workshop, our team contacted NCEAS’ IT team to get you an invite email to create an account on the server. An example of what that email may look like is included below but there are two key pieces of information:</p>
-<ol type="1">
-<li>Your username</li>
-<li>Your temporary password (covered by a <strong><span style="color:red">red bar</span></strong> in the screenshot).</li>
-</ol>
-<p>If you have not received that email, check your Spam folder for emails from Thomas Hetmank (hetmank@nceas.ucsb.edu) or Nick Outin (outin@nceas.ucsb.edu). If you have not received the email and it is not in your Spam, reach out to our team and we will work to get an invite sent to you.</p>
-<p><img src="images/server-login-3-invite-email.png" class="img-fluid"></p>
-</section>
-<section id="signing-into-the-server" class="level3">
-<h3 class="anchored" data-anchor-id="signing-into-the-server">Signing into the Server</h3>
-<p>In the following instructions, all words that look <code>like this</code> should be typed into the Terminal tab and run by pressing return or enter. Note that typing these commands into an R script or R Markdown will not work because it will attempt to run in the Console. All words that look <code>[like this]</code> (i.e., bracketed) should also be typed into the Terminal tab but the specific text should be replaced in a user-specific way that is clarified in the nearby text.</p>
-<ol type="1">
-<li><p>In the Terminal pane of RStudio, you will “ssh” into the server by running the following code: <code>ssh [your username]@aurora.nceas.ucsb.edu</code>. It is <span class="citation" data-cites="aurora">@aurora</span> because <strong>the name of the server is Aurora</strong>.</p></li>
-<li><p>If this is the first time you’ve accessed the server you will need to enter <code>yes</code> to accept the server’s SSH key.</p></li>
-<li><p>You will then be prompted to enter your <code>[temporary password]</code> (see the above email example). <strong>Note that the cursor will not advance as you type but it is registering your entries! There will be no indication that you are typing (such as: “•••••••••”)</strong> This throws off many users so hopefully the above note helps set your mind at ease.</p></li>
-<li><p>You will then be prompted to change your “expired” password. We consider your temporary password to be expired as soon as you use it because sharing passwords via email is not secure and this “expiration” lets you set the password to something that only you know at the outset of your time in the server. <strong>Note again that the cursor will not advance as you type but it is working!</strong> To update your password, enter your <code>[temporary password]</code>, then <code>[your strong new password]</code> and finally re-type <code>[your strong new password]</code> to confirm it. Note that your new password should not be “your strong new password” :)</p></li>
-<li><p>You are ready to go! Run <code>exit</code> to log out of the server in the Terminal tab.</p></li>
-<li><p>Now that you have set a new password, use your favorite web browser (e.g., Firefox, Chrome, etc.) to access <a href="https://aurora.nceas.ucsb.edu/">Aurora</a> and click “Login to RStudio Server”</p></li>
-<li><p>In the resulting page, you can sign in with the same username and password you just signed in on the Terminal tab with.</p></li>
-<li><p>You should now be in something that looks very much like RStudio but is housed in a tab on your browser! We will work together from here on out so once you have reached this point, let our team know and we can gather the group before continuing.</p></li>
-</ol>
-<p>If the above steps have not resulted in successfully accessing Aurora, consult <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/first_login_to_nceas_analytical_server">NCEAS’ instructions on first login</a> and/or <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/connecting_to_linux_using_ssh.html">SSH-specific instructions for Mac vs.&nbsp;Windows</a> and/or email us!</p>
 
 
 </section>
