@@ -215,7 +215,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong><span style="color:green">Push</span></strong> your changes to GitHub</p></li>
 </ol>
 <p>We can see those steps visually in the following workflow diagram:</p>
-<p><img src="images/git-conflict-workflow.png" class="img-fluid"></p>
+<p align="center">
+<img src="images/git-conflict-workflow.png" width="60%">
+</p>
 </section>
 <section id="how-merge-conflicts-happen" class="level2">
 <h2 class="anchored" data-anchor-id="how-merge-conflicts-happen">How Merge Conflicts Happen</h2>
@@ -235,11 +237,17 @@ ul.task-list li input[type="checkbox"] {
 <p>After clicking <strong><span style="color:blue">Pull</span></strong>, we get a new error message: “Merge conflict in test-script.R”.</p>
 <p><img src="images/conflicts-7-birds-pull.png" class="img-fluid"></p>
 <p>Looking closer, the merge conflict prompted a new version of <code>test-script.R</code> to pop up. This version contains our edits and our collaborator’s edits, along with the delimiter lines that start with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. <code>git</code> is urging us to manually fix the conflicted lines before continuing.</p>
-<p><img src="images/conflicts-8-conflicted-lines.png" class="img-fluid"></p>
+<p align="center">
+<img src="images/conflicts-8-conflicted-lines.png" width="80%">
+</p>
 <p>Our file now has an <strong><span style="color:orange">U</span></strong> icon, which stands for an unresolved merge conflict.</p>
-<p><img src="images/conflicts-9-unresolved.png" class="img-fluid"></p>
+<p align="center">
+<img src="images/conflicts-9-unresolved.png" width="80%">
+</p>
 <p>In general terms the steps that come before a merge conflict are displayed in the visual below. Note that though this has visual similarity to the workflow diagrams throughout this bookdown we do not recommend intentionally causing a merge conflict :)</p>
-<p><img src="images/git-conflict-cause.png" class="img-fluid"></p>
+<p align="center">
+<img src="images/git-conflict-cause.png" width="60%">
+</p>
 </section>
 <section id="resolving-merge-conflicts" class="level2">
 <h2 class="anchored" data-anchor-id="resolving-merge-conflicts">Resolving Merge Conflicts</h2>
@@ -248,7 +256,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Then stage, commit the changes, and push them to GitHub!</p>
 <p><img src="images/conflicts-11-commit-resolved.png" class="img-fluid"></p>
 <p>Perfect! We’ve fixed the merge conflict!</p>
-<p><img src="images/conflicts-12-push-resolved.png" class="img-fluid"></p>
+<p align="center">
+<img src="images/conflicts-12-push-resolved.png" width="80%">
+</p>
 <p>Let’s check back on the shared repository. The latest commit shows that we’ve successfully pushed our changes to GitHub.</p>
 <p><img src="images/conflicts-13-merged.png" class="img-fluid"></p>
 <p><img src="images/conflicts-14-checking-merged.png" class="img-fluid"></p>
