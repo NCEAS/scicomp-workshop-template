@@ -12,14 +12,32 @@ website:
   repo-url: https://github.com/NCEAS/scicomp-workshop-template
   repo-actions: [issue]
   twitter-card: true
-  navbar:
-    background: primary
-    left:
+  sidebar:
+    background: secondary
+    search: true
+    style: "docked"
+    contents:
       - href: index.qmd
-        text: Home
+        text: "Home"
       - content.qmd
       - about.qmd
+  navbar:
+    background: primary
     right:
+      - text: "Sci Comp Team"
+        menu:
+          - href: https://nceas.github.io/scicomp.github.io/
+            text: "Home"
+          - href: https://nceas.github.io/scicomp.github.io/staff.html
+            text: "People"
+      - text: "Other Workshops"
+        menu:
+          - href: https://nceas.github.io/scicomp-workshop-collaborative-coding/
+            text: "GitHub"
+          - href: https://nceas.github.io/scicomp-workshop-tidyverse/
+            text: "Tidyverse"
+          - href: https://njlyon0.github.io/asm-2022_github-workshop/
+            text: "R Shiny"
       - icon: github
         href: https://github.com/NCEAS/scicomp-workshop-template
   page-footer:
