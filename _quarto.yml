@@ -20,7 +20,6 @@ website:
       - href: index.qmd
         text: "Home"
       - content.qmd
-      - about.qmd
   navbar:
     background: primary
     right:
