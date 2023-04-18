@@ -4,6 +4,19 @@
 
 This repository is the template for workshops offered by NCEAS Scientific Computing Support (SciComp) Team. This repository (and by extension, future workshops' repositories) creates a website with [Quarto](https://quarto.org/) meaning that web pages can be written with Markdown syntax. Following the steps below when creating a new workshop repository guarantees a consistent structure and aesthetic across all workshops (i.e., a consistent "brand").
 
+## Acknowledgment
+
+The development of this training material is supported through the Long Term Ecological Research Network Office (LNO) (NSF award numbers 1545288 and 1929393) and the National Center for Ecological Analysis and Synthesis, UC Santa Barbara.
+
+**Citation:** Nick Lyon, Angel Chen, and Julien Brun. 2023. Collaborative Coding with GitHub. LNO Scientific Computing Team.
+
+<br>
+<hr>
+
+<p align="center">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+</p>
+
 ## To Make a New Workshop Repository:
 
 1. **Fork** this repository to your GitHub profile
