@@ -8,7 +8,7 @@ This repository is the template for workshops offered by NCEAS Scientific Comput
 
 The development of this training material is supported through the Long Term Ecological Research Network Office (LNO) (NSF award numbers 1545288 and 1929393) and the National Center for Ecological Analysis and Synthesis, UC Santa Barbara.
 
-**Citation:** Nick J Lyon, Angel Chen, and Julien Brun. 2023. <WORKSHOP NAME>. LNO Scientific Computing Team.
+**Citation:** Nick J Lyon, Angel Chen, and Julien Brun. 2023. \<WORKSHOP NAME\>. LNO Scientific Computing Team.
 
 <br>
 <hr>
